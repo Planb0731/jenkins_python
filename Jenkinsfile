@@ -11,6 +11,16 @@ pipeline {
                 sh 'ls'
                 sh 'rm -r jenkins_python'
             }
+            
         }
+        stage('Send Email') {
+            steps {
+                script {
+                    sendEmail subject: "Build Status", 
+                              body: "The build has ${currentBuild.currentResult}!", 
+                              to: "ldeliver@163.com"
+                }
+            }
+        }   
     }
 }
