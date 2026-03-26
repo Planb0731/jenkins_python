@@ -9,7 +9,7 @@ pipeline {
                 sh 'pytest -vs test_api.py'
                 sh 'cd /var/jenkins_home/workspace'
                 sh 'ls'
-                sh 'rm -r test_python'
+                sh 'rm -r jenkins_python'
             }
         }
     }
