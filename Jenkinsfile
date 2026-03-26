@@ -16,7 +16,7 @@ pipeline {
         stage('Send Email') {
             steps {
                 script {
-                    sendEmail subject: "Build Status", 
+                    emailext subject: "Build Status", 
                               body: "The build has ${currentBuild.currentResult}!", 
                               to: "ldeliver@163.com"
                 }
