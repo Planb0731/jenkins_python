@@ -7,7 +7,7 @@ pipeline {
                 echo 'checking out code ...'
                 sh 'git clone git@github.com:Planb0731/jenkins_python.git'
                 sh 'pytest -vs test_api.py'
-                sh 'cd /var/jenkins_home/workspace'
+                sh 'cd /var/jenkins_home/workspace/test_python'
                 sh 'ls'
                 sh 'rm -r jenkins_python'
             }
